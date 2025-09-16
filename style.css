@@ -6,7 +6,7 @@ body {
 /* Header and navigation */
 header {
     background: #f5f1f2;
-    color: rgb(23, 20, 20);
+    color: rgb(185, 54, 54);
     padding: clamp(8px, 2vw, 20px); /* dynamic padding */
     margin-bottom: clamp(10px, 2vw, 30px); /* dynamic margin */
 }
@@ -44,7 +44,7 @@ nav {
 
 .menu a:hover,
 .active {
-    background: #9b6f68;
+    background: #98add0;
     border-radius: 5px;
 }
 
