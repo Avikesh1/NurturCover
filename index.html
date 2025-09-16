@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NurturCover - Home</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .menu a.active {
+            font-weight: bold;
+            color: red;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,7 +52,13 @@
     </header>
 
     <main class="hero">
-        <img src="images/Screenshot 2025-09-16 134104.png">
+        <!-- Responsive Logo -->
+        <picture>
+            <source srcset="images/NurturCover_mobile.png" media="(max-width: 600px)">
+            <source srcset="images/NurturCover_desktop.png" media="(min-width: 601px)">
+            <img src="images/Screenshot 2025-09-16 134104.png" alt="NurturCover Logo">
+        </picture>
+
         <div class="dots">
             <span class="dot active"></span>
             <span class="dot"></span>
