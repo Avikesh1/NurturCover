@@ -128,27 +128,31 @@ ul { text-align: left; padding-left: 20px; }
 /* 📱 Mobile-friendly layout */
 @media (max-width: 768px) {
   .plans {
-    display: flex;               /* simpler than forcing grid on mobile */
-    flex-direction: column;      /* stack vertically */
-    align-items: center;         /* center all plans */
-    gap: 20px;                   /* consistent spacing */
+    display: grid;               /* switch to grid layout */
+    grid-template-columns: 1fr;  /* single column */
+    row-gap: 20px;               /* spacing between plans */
+    justify-items: center;       /* center each plan horizontally */
     padding: 1.5rem;
   }
 
   .plan {
-    width: 90%;                  /* fluid width for all screen sizes */
+    width: 90%;                  /* fluid width */
     max-width: 400px;            /* prevents stretching too wide */
   }
 
   header nav {
-    flex-direction: column;
-    align-items: center;         /* ensures centered nav links */
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: 1fr;  /* single column nav links */
+    row-gap: 0.75rem;
+    justify-items: center;       /* center nav links */
   }
 
   .menu {
-    flex-wrap: wrap;             /* allows wrapping if needed */
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* responsive menu items */
+    gap: 0.75rem;
+    justify-items: center;
     text-align: center;
   }
 }
+
