@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NurturCover - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">NurturCover</h1>
+            <ul class="menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Plans.html">Plans</a></li>
+                <li><a href="Benefits.html">Benefits</a></li>
+                <li><a href="MissionVision.html">Mission & Vision</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <img src="images/Screenshot 2025-09-16 134104.png">
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 NurturCover. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.carousel img');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+                dots[i].classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        // Auto-slide every 4 seconds
+        setInterval(nextSlide, 4000);
+
+        // Dots click navigation
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                currentIndex = i;
+                showSlide(currentIndex);
+            });
+        });
+    </script>
+</body>
+</html>
