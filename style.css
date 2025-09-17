@@ -58,12 +58,9 @@ button {
 button:hover {
     background: #e65c00;
 }
-
 /* Footer styling */
 footer {
-  display: flex;
-  justify-content: space-between;   /* text left, links right */
-  align-items: flex-end;            /* align items to bottom */
+  text-align: center;       /* center the © text */
   padding: clamp(10px, 3vw, 20px);
   background: #f5f1f2;
   color: rgb(23, 20, 20);
@@ -74,27 +71,8 @@ footer p {
   margin: 0;  /* keeps © text neat */
 }
 
-/* Footer links stacked vertically on the right */
-.footer-links {
-  display: flex;
-  flex-direction: column;  /* stack links vertically */
-  align-items: flex-end;   /* align to right */
-  gap: 5px;                /* spacing between links */
-}
-
-.footer-links a {
-  color: rgb(23, 20, 20);
-  text-decoration: none;   /* removes underline */
-  font-size: 0.9rem;
-}
-
-.footer-links a:hover {
-  text-decoration: underline; /* underline only on hover */
-}
-
-
 ------------------------------------------------------------------------------------------------------
-plans-----------
+plans -----------
 
     body {
   font-family: Arial, sans-serif;
