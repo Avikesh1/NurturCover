@@ -58,15 +58,29 @@ button {
 
 button:hover {
     background: #e65c00;
+footer {
+  text-align: center;
+  padding: clamp(10px, 3vw, 20px);
+  background: #f5f1f2;
+  color: rgb(23, 20, 20);
+  margin-top: auto;
 }
 
-footer {
-    text-align: center;
-    padding: clamp(10px, 3vw, 20px);
-    background: #f5f1f2;
-    color: rgb(23, 20, 20);
-    margin-top: auto;  /* pushes footer to bottom */
+.footer-links {
+  margin-top: 8px;
 }
+
+.footer-links a {
+  color: rgb(23, 20, 20);
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 
 ------------------------------------------------------------------------------------------------------
 plans-----------
