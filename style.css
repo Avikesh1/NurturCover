@@ -63,10 +63,9 @@ button:hover {
 footer {
     text-align: center;
     padding: clamp(10px, 3vw, 20px);
-    margin-top: clamp(15px, 4vw, 30px); /* dynamic top margin */
-    margin-bottom: clamp(10px, 2vw, 30px); /* dynamic margin */
     background: #f5f1f2;
     color: rgb(23, 20, 20);
+    margin-top: auto;  /* pushes footer to bottom */
 }
 
 ------------------------------------------------------------------------------------------------------
