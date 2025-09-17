@@ -64,6 +64,7 @@ footer {
     text-align: center;
     padding: clamp(10px, 3vw, 20px);
     margin-top: clamp(15px, 4vw, 30px); /* dynamic top margin */
+    margin-bottom: clamp(10px, 2vw, 30px); /* dynamic margin */
     background: #f5f1f2;
     color: rgb(23, 20, 20);
 }
@@ -156,3 +157,45 @@ ul { text-align: left; padding-left: 20px; }
   }
 }
 
+------------------------------------------------------------------------------------------------------
+Drop down ------------------------------
+
+    /* Basic styling */
+    .dropdown {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .dropdown span {
+      font-weight: bold;
+    }
+
+    .dropdown::after {
+      content: "+"; /* plus sign by default */
+      font-weight: bold;
+      margin-left: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .dropdown.active::after {
+      content: "–"; /* minus sign when open */
+    }
+
+    .dropdown-content {
+      display: none;
+      margin-top: 8px;
+      margin-left: 15px;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .dropdown-content li {
+      list-style: disc;
+      margin-left: 20px;
+    }
+
+    .dropdown-content.show {
+      display: block;
+    }
