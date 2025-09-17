@@ -54,31 +54,42 @@ button {
     padding: clamp(6px, 1.5vw, 12px) clamp(8px, 2vw, 16px);
     border: none;
     cursor: pointer;
-}
-
+/* Clean up hover button */
 button:hover {
     background: #e65c00;
+}
+
+/* Footer styling */
 footer {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;   /* text left, links right */
+  align-items: flex-end;            /* align items to bottom */
   padding: clamp(10px, 3vw, 20px);
   background: #f5f1f2;
   color: rgb(23, 20, 20);
   margin-top: auto;
 }
 
+footer p {
+  margin: 0;  /* keeps © text neat */
+}
+
+/* Footer links stacked vertically on the right */
 .footer-links {
-  margin-top: 8px;
+  display: flex;
+  flex-direction: column;  /* stack links vertically */
+  align-items: flex-end;   /* align to right */
+  gap: 5px;                /* spacing between links */
 }
 
 .footer-links a {
   color: rgb(23, 20, 20);
-  text-decoration: none;
-  margin: 0 5px;
+  text-decoration: none;   /* removes underline */
   font-size: 0.9rem;
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* underline only on hover */
 }
 
 
