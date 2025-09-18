@@ -59,7 +59,7 @@ header nav {
 }
 
 .menu a:hover,
-.active {
+.menu a.active {
     background: #6b96e0;
     border-radius: 5px;
 }
@@ -82,14 +82,26 @@ button:hover {
 /* =======================
    Footer
 ======================= */
+/* Make the whole page use flex layout */
+html, body {
+    height: 100%;           /* full height */
+    margin: 0;              /* remove default margin */
+    display: flex;
+    flex-direction: column; /* stack elements top to bottom */
+}
+
+/* Main content grows to fill space, pushing footer down */
+main {
+    flex: 1;
+}
+
+/* Footer styles */
 footer {
     text-align: center;
     padding: clamp(10px, 3vw, 20px);
     background: #f5f1f2;
     color: rgb(23, 20, 20);
-    margin-top: auto;
 }
-
 footer p {
     margin: 0;
 }
